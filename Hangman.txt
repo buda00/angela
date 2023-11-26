@@ -1,0 +1,18 @@
+Hangman
+treba mi modul za random
+
+Program odabere nasumicno rijec
+prikaz: program na poziciju svakog slova u odabranoj rijeci upisuje "_"
+
+program pita korisnika da pogodi slovo
+ako je slovo jednako jednom od slova u ponudjenoj rijeci:
+	program na poziciji tog ispisuje slovo koje se nalazi na toj poziciji u 	ponudjenoj rijeci 
+
+ako slovo nije jedanko jednako - ne ucini nista
+
+ako pogodi slovo:
+pokazu se sva slova
+ako ne pogodi slovo
+	crta se jedan od 6 dijelova tijela
+ako se iscrtaju svi dijelovi tijela izgubio je
+ako pogodi sva slova korisnik je pobijedio

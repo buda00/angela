@@ -1,0 +1,20 @@
+
+espresso - 1.50
+latte - 2.50
+cappuccino - 3.00
+
+penny - 1 cent - 0.01 $
+nickel - 5 cents - 0.05 $
+dime - 10 cents - 0.10 $
+quarter - 25 cents - 0.25 $
+
+
+1. print report - type report and show resources left 
+2. check resources sufficient
+3. coins - calculate coins worth in $ and what is the change, hand the drink and say enjoy
+4. check transaction seccesuful
+5. make coffee
+
+
+
+
