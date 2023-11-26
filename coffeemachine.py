@@ -57,6 +57,6 @@ resources = {
 
 # 2.turn off kao elif turn off
 
-# 3.print report
+# 3.print report...
 
 
