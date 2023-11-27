@@ -30,8 +30,54 @@ resources = {
     "coffee": 100,
 }
 # 1. take order
-#def take_order():
-#    order = input("What would you like? (espresso/latte/cappuccino) or report")
+def take_order():
+    order = input("What would you like: espresso/latte/cappuccino or report? ")
+    print (f'You chose {order}.')
+    return order
+
+money_balance = 0
+def take_coins ():
+    penny =  int(input ("How many pennies? "))
+    nickel = int(input ("How many nickels? "))
+    dime = int(input ("How many dimes? "))
+    quarter = int(input ("How many quarters? "))
+#coins = {
+#    "penny": penny * 0.01
+#    "nickel" : nickel * 0.05
+#    "dime" : dimes * 0.10
+#    "quarter" : quarter * 0.25 
+#    }
+    entered_money = penny * 0.01 + nickel * 0.05 + dime * 0.10 + quarter * 0.25 
+    print (f'You entered {entered_money}$.') 
+    return entered_money
+
+money_balance = take_coins() - MENU[take_order()]["cost"]
+print(f'Here is {money_balance}$ in change.')
+print(f'Here is your {take_order()}. Enjoy! ')
+#def change_calculator ()
+
+#    if order =! "report"
+#    resources =- order 
+
+
+
+resources_left():
+# resources_rest = {}
+# water 
+resources_rest = resources["water"]-menu[order]["ingredients"]['water']
+# milk  
+resources_rest = resources["milk"]-menu[order]["ingredients"]['milk']
+# coffee  
+resources_rest = resources["coffee"]-menu[order]["ingredients"]['coffee']
+# cost  
+money_afterOrder = money - menu[order]["cost"]
+#   order = {}
+#  
+
+# money = penny * 0.01 + nickel * 0.05 + dimes * 0.10 + quarter * 0.25 
+    
+
+#     resources =- order 
 #    if order == "report":
 #    return 
         
@@ -57,6 +103,7 @@ resources = {
 
 # 2.turn off kao elif turn off
 
-# 3.print report...
+# 3.print report.....
 
-
+#take_order()
+take_coins ()
