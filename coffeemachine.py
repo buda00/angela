@@ -61,19 +61,26 @@ print(f'Here is your {take_order()}. Enjoy! ')
 
 
 
-resources_left():
-# resources_rest = {}
-# water 
-resources_rest = resources["water"]-menu[order]["ingredients"]['water']
-# milk  
-resources_rest = resources["milk"]-menu[order]["ingredients"]['milk']
-# coffee  
-resources_rest = resources["coffee"]-menu[order]["ingredients"]['coffee']
-# cost  
-money_afterOrder = money - menu[order]["cost"]
-#   order = {}
-#  
+def resources_left():
+    # resources_rest = {}
+    # water 
+    resources_rest_water = resources["water"]-menu[order]["ingredients"]['water']
+    # milk  
+    resources_rest_milk = resources["milk"]-menu[order]["ingredients"]['milk']
+    # coffee  
+    resources_rest_coffee = resources["coffee"]-menu[order]["ingredients"]['coffee']
+    # cost  
+    money_afterOrder = money - menu[order]["cost"]
+#   # resources_rest = {}
 
+    resources_rest = {
+    "water": resources_rest_water,
+    "milk": resources_rest_milk,
+    "coffee": resources_rest_coffee,
+}
+    print (f"There is still: {resources_rest}")
+    return resources_rest
+      
 # money = penny * 0.01 + nickel * 0.05 + dimes * 0.10 + quarter * 0.25 
     
 
@@ -105,5 +112,6 @@ money_afterOrder = money - menu[order]["cost"]
 
 # 3.print report.....
 
-#take_order()
+take_order()
 take_coins ()
+resources_left()
