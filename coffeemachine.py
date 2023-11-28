@@ -29,58 +29,67 @@ resources = {
     "milk": 200,
     "coffee": 100,
 }
+
+money_balance = 0
 # 1. take order
-def take_order():
+def make_order():
     order = input("What would you like: espresso/latte/cappuccino or report? ")
     print (f'You chose {order}.')
     return order
 
-money_balance = 0
-def take_coins ():
+order = make_order()
+
+
+def insert_coins ():
     penny =  int(input ("How many pennies? "))
     nickel = int(input ("How many nickels? "))
     dime = int(input ("How many dimes? "))
     quarter = int(input ("How many quarters? "))
-#coins = {
-#    "penny": penny * 0.01
-#    "nickel" : nickel * 0.05
-#    "dime" : dimes * 0.10
-#    "quarter" : quarter * 0.25 
-#    }
+
     entered_money = penny * 0.01 + nickel * 0.05 + dime * 0.10 + quarter * 0.25 
-    print (f'You entered {entered_money}$.') 
+    print (f'You entered {entered_money} $.') 
     return entered_money
 
-money_balance = take_coins() - MENU[take_order()]["cost"]
-print(f'Here is {money_balance}$ in change.')
-print(f'Here is your {take_order()}. Enjoy! ')
-#def change_calculator ()
 
-#    if order =! "report"
-#    resources =- order 
+insert_coins = insert_coins ()
 
+def money_balance():
+    
+    money_balance = insert_coins - MENU[order]["cost"]
+    print(f'Here is {money_balance} $ in change.')
+    print(f'Here is your {order}. Enjoy! ')
+    return money_balance
 
+money_balance = money_balance()
 
 def resources_left():
     # resources_rest = {}
     # water 
-    resources_rest_water = resources["water"]-menu[order]["ingredients"]['water']
-    # milk  
-    resources_rest_milk = resources["milk"]-menu[order]["ingredients"]['milk']
+    resources_rest_water = resources["water"]-MENU[order]["ingredients"]['water']
+    # milk
+    if   
+    resources_rest_milk = resources["milk"]-MENU[order]["ingredients"]["milk"]
     # coffee  
-    resources_rest_coffee = resources["coffee"]-menu[order]["ingredients"]['coffee']
+    resources_rest_coffee = resources["coffee"]-MENU[order]["ingredients"]['coffee']
     # cost  
-    money_afterOrder = money - menu[order]["cost"]
-#   # resources_rest = {}
+    money_balance = insert_coins - MENU[order]["cost"]
 
     resources_rest = {
     "water": resources_rest_water,
     "milk": resources_rest_milk,
     "coffee": resources_rest_coffee,
-}
-    print (f"There is still: {resources_rest}")
-    return resources_rest
+}  
+    print(f'\nResources left are: ')
+    for key, value in resources_rest.items():
       
+        print( key, ":", value)
+
+    return resources_rest
+
+resources_left = resources_left()
+
+
+
 # money = penny * 0.01 + nickel * 0.05 + dimes * 0.10 + quarter * 0.25 
     
 
@@ -112,6 +121,6 @@ def resources_left():
 
 # 3.print report.....
 
-take_order()
-take_coins ()
-resources_left()
+
+#take_coins ()
+#resources_left()
